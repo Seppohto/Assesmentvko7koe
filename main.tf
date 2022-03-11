@@ -108,7 +108,7 @@ depends_on = [
   name                            = "${var.prefix}-vm"
   resource_group_name             = azurerm_resource_group.koe.name
   location                        = azurerm_resource_group.koe.location
-  size                            = "Standard_D2_v2"
+  size                            = "Standard_DS1_v2"
   admin_username                  = var.administrator_login
   admin_password                  = var.administrator_login_password
   disable_password_authentication = false
@@ -118,9 +118,9 @@ depends_on = [
   source_image_reference {
     publisher = "Canonical"
 
-    offer     = "UbuntuServer"
+    offer     = "0001-com-ubuntu-server-focal"
 
-    sku       = "16.04-LTS"
+    sku       = "20_04-lts-gen2"
 
     version   = "latest"
   }
